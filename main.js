@@ -31,7 +31,7 @@ const fetchAdvice = async () => {
     const data = await res.json();
     const { id, advice } = data.slip;
 
-    spinnerEl.classList.toggle("spinner-hide");
+    // spinnerEl.classList.toggle("spinner-hide");
 
     renderAdviceHTML(id, advice);
   } catch (err) {
