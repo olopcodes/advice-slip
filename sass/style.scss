@@ -26,6 +26,10 @@ body {
   overflow: hidden;
 }
 
+.spinner-hide {
+  display: none !important;
+}
+
 .advice-box {
   background-color: $bg-color-1;
   width: 90%;
