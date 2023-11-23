@@ -1,5 +1,5 @@
 // for sass
-import "./style.scss";
+// import "./style.scss";
 
 // variables
 const adviceButtonEl = document.querySelector(".advice-box__button");
