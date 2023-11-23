@@ -1,0 +1,179 @@
+$font-family: "Manrope", sans-serif;
+$bg-color: hsl(218, 23%, 16%);
+$bg-color-1: hsl(217, 19%, 24%);
+$quote-box: hsl(217, 19%, 38%);
+$accent: hsl(193, 38%, 86%);
+$accent-green: hsl(150, 100%, 66%);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: $font-family;
+  background-color: $bg-color;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.advice-box {
+  background-color: $bg-color-1;
+  width: 90%;
+  border-radius: 0.65rem;
+  padding: 5rem 3rem;
+  text-align: center;
+  position: relative;
+  max-width: 40rem;
+
+  &__title {
+    color: $accent-green;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.25rem;
+  }
+
+  &__advice {
+    font-size: 2.5rem;
+    color: $accent;
+    margin-bottom: 3rem;
+  }
+
+  &__divider {
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: $accent-green;
+    width: 6rem;
+    display: grid;
+    place-items: center;
+    height: 6rem;
+    border-radius: 50%;
+    border: 0;
+    transition: all 0.3s ease;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 0px 4px 4px $accent-green;
+
+      img {
+        animation: rotateDice 0.6s ease 0.2s forwards infinite;
+      }
+    }
+  }
+}
+
+@keyframes rotateDice {
+  0% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+
+// spinner
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  margin: -4px 0 0 -4px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
