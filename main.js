@@ -24,7 +24,7 @@ const fetchAdvice = async () => {
       return;
     }
 
-    spinnerEl.classList.toggle("spinner-hide");
+    spinnerEl.remove();
 
     adviceButtonEl.blur();
 
