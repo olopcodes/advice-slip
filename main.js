@@ -24,14 +24,10 @@ const fetchAdvice = async () => {
       return;
     }
 
-    spinnerEl.remove();
-
     adviceButtonEl.blur();
 
     const data = await res.json();
     const { id, advice } = data.slip;
-
-    // spinnerEl.classList.toggle("spinner-hide");
 
     renderAdviceHTML(id, advice);
   } catch (err) {
