@@ -18,11 +18,15 @@ const removeSpinner = () => {
 };
 
 const fetchAdvice = async () => {
+  spinnerEl.classList.remove("spinner-hide");
+
   try {
     const res = await fetch("https://api.adviceslip.com/advice");
     if (!res.ok) {
       return;
     }
+
+    spinnerEl.classList.add("spinner-hide");
 
     adviceButtonEl.blur();
 
