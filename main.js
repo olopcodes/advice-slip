@@ -22,8 +22,6 @@ const fetchAdvice = async () => {
 
   spinnerEl.style.display = "inline-block";
 
-  adviceTextEl.innerHTML = "";
-
   try {
     const res = await fetch("https://api.adviceslip.com/advice");
     if (!res.ok) {
