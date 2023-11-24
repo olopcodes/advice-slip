@@ -18,7 +18,9 @@ const removeSpinner = () => {
 };
 
 const fetchAdvice = async () => {
-  spinnerEl.classList.remove("spinner-hide");
+  // spinnerEl.classList.remove("spinner-hide");
+
+  spinnerEl.style.display = "inline-block";
 
   try {
     const res = await fetch("https://api.adviceslip.com/advice");
@@ -26,8 +28,8 @@ const fetchAdvice = async () => {
       return;
     }
 
-    spinnerEl.classList.add("spinner-hide");
-
+    // spinnerEl.classList.add("spinner-hide");
+    spinnerEl.style.display = "none";
     adviceButtonEl.blur();
 
     const data = await res.json();
